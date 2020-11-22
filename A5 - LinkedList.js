@@ -47,7 +47,9 @@ class LinkedList {
 			return;
 		}
 		let newHead = new Node(el);
+		const currentHead = this.head;
 		this.head = newHead;
+		this.head.next = currentHead;
 	}
 
 	shift() {
@@ -90,6 +92,7 @@ const list = new LinkedList();
 list.push(1);
 list.push(2);
 list.push(3);
-const a = list.reverse();
-console.log(a);
+list.unshift(10);
+// const a = list.reverse();
 console.log(list);
+// console.log(list);
