@@ -103,6 +103,21 @@ class BST {
 		};
 		this.root = removeNode(this.root, data);
 	}
+
+	BFS() {
+		let node = this.root;
+		let queue = [];
+		let data = [];
+		queue.push(node);
+		while (queue.length) {
+			node = queue.shift();
+			data.push(node.val);
+			if (node.left) queue.push(node.left);
+			if (node.right) queue.push(node.right);
+		}
+		return data;
+	}
+	
 }
 
 const bst = new BST();
@@ -117,4 +132,4 @@ bst.add(5);
 bst.add(7);
 bst.add(20);
 bst.add(10);
-console.log(bst)
+console.log(bst);
