@@ -92,8 +92,8 @@ class LinkedList {
 			prev = node;
 			node = tmp;
 		}
-		this.head = prev; // this doesn't return the pointer but makes the array reversed in place;
-		return this.head; // Also return the pointer and also reverse the list in place
+		this.head = prev;
+		return this.head;
 	}
 	smallestItem() {
 		let current = this.head;
@@ -121,7 +121,6 @@ class LinkedList {
 		}
 		return largest;
 	}
-	// 1 -> 2 -> 2 -> 30 -> 0
 
 	deleteAt(idx) {
 		let prev = this.atIndex(idx - 1);
@@ -149,9 +148,6 @@ class LinkedList {
 			this.deleteAt(idx);
 			this.length--;
 		}
-
-		// run the loop freqOfItem times
-		//     inside the loop get the index of the item and delete it
 	}
 
 	frequencyCounter() {
@@ -179,16 +175,16 @@ list.push(2);
 list.push(2);
 list.push(30);
 list.push(0);
-// list.unshift(10);
-// const a = list.reverse();
-// console.log(list);
-// console.log(list);
-// console.log(list.smallestItem());
-// console.log(list.largestestItem());
-// console.log(list.frequencyCounter());
-// console.log(list);
-// list.insertAt(100, 4);
-// console.log(list);
-// console.log(list.getIndex(2));
+list.unshift(10);
+const a = list.reverse();
+console.log(list);
+console.log(list);
+console.log(list.smallestItem());
+console.log(list.largestestItem());
+console.log(list.frequencyCounter());
+console.log(list);
+list.insertAt(100, 4);
+console.log(list);
+console.log(list.getIndex(2));
 list.deleteAll(2);
 console.log(list);
