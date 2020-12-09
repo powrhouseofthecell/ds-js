@@ -1,4 +1,3 @@
-// First Implementation
 class Node {
 	constructor(data, left = null, right = null) {
 		this.data = data;
@@ -117,7 +116,6 @@ class BST {
 		}
 		return data;
 	}
-	
 }
 
 const bst = new BST();
